@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 离职赔偿计算器 | Severance Pay Calculator
 
-## Getting Started
+基于中国劳动法，计算离职经济补偿金及各项工资折现。
 
-First, run the development server:
+## 功能
+
+- **多种辞退方案**：违法解除(2N)、合法解除(N+1)、协商解除(N)、自定义
+- **N 基数可配置**：支持使用12个月平均工资或自定义基数
+- **N 系数可调整**：默认1.0，可自定义
+- **各项折现计算**：
+  - 当月工资折现
+  - 未休年假折现（×200%）
+  - 未休婚假、丧假、陪产假折现
+  - 调休折现（支持天/小时）
+  - 加班费折现
+  - 年终奖按比例折现
+- **免税计算**：经济补偿金当地社平工资3倍免税
+- **复制/打印**结果
+
+## 技术栈
+
+- Next.js 14+ (App Router)
+- TailwindCSS
+- TypeScript
+- 纯前端计算，无需后端
+
+## 开发
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 部署
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+npm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 免责声明
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+本计算器仅供参考，具体赔偿方案请咨询专业律师。
