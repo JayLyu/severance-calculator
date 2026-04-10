@@ -1,4 +1,9 @@
-@import "tailwindcss";
+@import "tailwindcss" layer(base);
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
 
 :root {
   --background: #f9fafb;

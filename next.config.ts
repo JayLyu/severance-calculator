@@ -6,6 +6,9 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   basePath: "/severance-calculator",
+  turbopack: {
+    root: import.meta.dirname,
+  },
 };
 
 export default nextConfig;
